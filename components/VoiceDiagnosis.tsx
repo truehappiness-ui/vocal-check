@@ -167,6 +167,42 @@ export default function VoiceDiagnosis({ onComplete }: Props) {
                 </div>
               </div>
             </div>
+            {/* マイク許可の案内 */}
+            <div className="bg-amber-50 border border-amber-200 rounded-2xl p-4 mb-4">
+              <div className="flex items-start gap-2">
+                <span className="text-lg flex-shrink-0">⚠️</span>
+                <div>
+                  <p className="text-sm font-semibold text-amber-800 mb-2">マイクの許可が必要です</p>
+                  <p className="text-xs text-amber-700 leading-relaxed mb-3">
+                    「音声診断を始める」を押すと、マイクの使用許可を求めるメッセージが表示されます。<strong>「許可」</strong>をタップしてください。
+                  </p>
+                  <details className="text-xs text-amber-700">
+                    <summary className="cursor-pointer font-semibold mb-2">許可が出ない・拒否してしまった方はこちら</summary>
+                    <div className="space-y-3 mt-2">
+                      <div className="bg-white rounded-xl p-3 border border-amber-100">
+                        <p className="font-bold text-amber-800 mb-1">🍎 iPhoneの場合（Safari）</p>
+                        <ol className="space-y-0.5 text-amber-700 list-decimal list-inside">
+                          <li>iPhoneの「設定」アプリを開く</li>
+                          <li>下にスクロールして「Safari」をタップ</li>
+                          <li>「マイク」→「許可」に変更</li>
+                          <li>このページを再読み込み</li>
+                        </ol>
+                      </div>
+                      <div className="bg-white rounded-xl p-3 border border-amber-100">
+                        <p className="font-bold text-amber-800 mb-1">🤖 Androidの場合（Chrome）</p>
+                        <ol className="space-y-0.5 text-amber-700 list-decimal list-inside">
+                          <li>Chromeのアドレスバー左の🔒をタップ</li>
+                          <li>「サイトの設定」をタップ</li>
+                          <li>「マイク」→「許可」に変更</li>
+                          <li>このページを再読み込み</li>
+                        </ol>
+                      </div>
+                    </div>
+                  </details>
+                </div>
+              </div>
+            </div>
+
             <button onClick={() => setStep("longTone")} className="btn-primary w-full py-4 mb-3">
               音声診断を始める
             </button>
