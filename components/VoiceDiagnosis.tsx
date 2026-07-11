@@ -191,11 +191,12 @@ export default function VoiceDiagnosis({ onComplete }: Props) {
                       <div className="bg-white rounded-xl p-3 border border-amber-100">
                         <p className="font-bold text-amber-800 mb-1">🤖 Androidの場合（Chrome）</p>
                         <ol className="space-y-0.5 text-amber-700 list-decimal list-inside">
-                          <li>Chromeのアドレスバー左の🔒をタップ</li>
-                          <li>「サイトの設定」をタップ</li>
-                          <li>「マイク」→「許可」に変更</li>
-                          <li>このページを再読み込み</li>
+                          <li>Chromeでこのページを開いた状態で、アドレスバー左端の⚙️または🔒をタップ</li>
+                          <li>「権限」をタップ</li>
+                          <li>「マイク」→「許可」に変更（※「カメラ」ではなく「マイク」）</li>
+                          <li>ページを再読み込み</li>
                         </ol>
+                        <p className="text-amber-600 mt-2">※ アドレスバー左にマークが出ない場合は、右上の「⋮」→「サイトの設定」→「マイク」で変更できます</p>
                       </div>
                     </div>
                   </details>
